@@ -1,6 +1,6 @@
 <?php
 
-namespace Paulspr;
+namespace Paulspr\Regionate;
 
 class Regionate
 {
