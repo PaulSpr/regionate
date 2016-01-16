@@ -1,0 +1,20 @@
+{
+	"name": "paulspr/regionate",
+	"description": "Laravel helper class to help with region specific formatting and validation.",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Paul Sprangers",
+			"email": "paul@interactivestudios.nl"
+		}
+	],
+	"require": {
+		"php": ">=5.3.0"
+	},
+	"autoload": {
+		"psr-0": {
+			"Paulspr\\Regionate\\": "src/"
+		}
+	},
+	"minimum-stability": "stable"
+}
