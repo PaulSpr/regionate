@@ -43,23 +43,23 @@ class Regionate
 
 	public static function dateCompact( $date, $overrideRegion = null ){
 		$region = $overrideRegion ? self::$regions[$overrideRegion] : self::$currentRegion;
-		return date($region->dateCompact, strtotime($date));
+		return strftime($region->dateCompact, strtotime($date));
 	}
 	public static function dateShort( $date, $overrideRegion = null ){
 		$region = $overrideRegion ? self::$regions[$overrideRegion] : self::$currentRegion;
-		return date($region->dateShort, strtotime($date));
+		return strftime($region->dateShort, strtotime($date));
 	}
 	public static function dateNormal( $date, $overrideRegion = null ){
 		$region = $overrideRegion ? self::$regions[$overrideRegion] : self::$currentRegion;
-		return date($region->dateNormal, strtotime($date));
+		return strftime($region->dateNormal, strtotime($date));
 	}
 	public static function dateLong( $date, $overrideRegion = null ){
 		$region = $overrideRegion ? self::$regions[$overrideRegion] : self::$currentRegion;
-		return date($region->dateLong, strtotime($date));
+		return strftime($region->dateLong, strtotime($date));
 	}
 	public static function dateFull( $date, $overrideRegion = null ){
 		$region = $overrideRegion ? self::$regions[$overrideRegion] : self::$currentRegion;
-		return date($region->dateFull, strtotime($date));
+		return strftime($region->dateFull, strtotime($date));
 	}
 
 

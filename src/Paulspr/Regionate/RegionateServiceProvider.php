@@ -21,11 +21,11 @@ class RegionateServiceProvider extends ServiceProvider
 		$nl->thousandsSeperator		= '.';
 		$nl->currency				= '&euro;';
 		$nl->currencyValue			= 1.09125;
-		$nl->dateCompact			= 'j-n-y';
-		$nl->dateShort				= 'j-n-Y';
-		$nl->dateNormal				= 'j M Y';
-		$nl->dateLong				= 'j F Y';
-		$nl->dateFull				= 'l j F Y';
+		$nl->dateCompact			= '%e-%-m-%y';
+		$nl->dateShort				= '%e-%-m-%Y';
+		$nl->dateNormal				= '%e %b %Y';
+		$nl->dateLong				= '%e %B %Y';
+		$nl->dateFull				= '%A %e %B %Y';
 
 		Regionate::addRegion('nl', $nl);
 
@@ -35,16 +35,18 @@ class RegionateServiceProvider extends ServiceProvider
 		$us->thousandsSeperator		= ',';
 		$us->currency				= '$';
 		$us->currencyValue			= 1;
-		$us->dateCompact			= 'n.j.y';
-		$us->dateShort				= 'n.j.Y';
-		$us->dateNormal				= 'M j Y';
-		$us->dateLong				= 'F j Y';
-		$us->dateFull				= 'l F j Y';
+		$us->dateCompact			= '%-m.%e.%y';
+		$us->dateShort				= '%-m.%e.%Y';
+		$us->dateNormal				= '%b %e %Y';
+		$us->dateLong				= '%B %e %Y';
+		$us->dateFull				= '%A %B %e %Y';
 
 
 		Regionate::addRegion('us', $us);
 
 		$defaultRegion = config('app.region') ? config('app.region') : config('app.fallback_region');
 		Regionate::setRegion($defaultRegion);
+
+		RegionateCarbon::setLocale(config('app.locale'));
 	}
 }
