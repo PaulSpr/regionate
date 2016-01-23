@@ -6,7 +6,14 @@ class Region{
 	public
 		$localName,
 		$thousandsSeperator,
-		$decimalPoint;
+		$decimalPoint,
+		$currency,
+		$currencyValue,
+		$dateCompact,
+		$dateShort,
+		$dateNormal,
+		$dateLong,
+		$dateFull;
 
 	public function __construct( $localName )
 	{

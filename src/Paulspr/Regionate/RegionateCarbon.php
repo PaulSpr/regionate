@@ -25,4 +25,34 @@ class RegionateCarbon extends Carbon{
 		return Regionate::dateFull($this->toDateTimeString());
 	}
 
+
+	public function shortTime(){
+		return Regionate::timeShort($this->toDateTimeString());
+	}
+
+	public function longTime(){
+		return Regionate::timeLong($this->toDateTimeString());
+	}
+
+
+	public function compactDateTime(){
+		return Regionate::dateTimeCompact($this->toDateTimeString());
+	}
+
+	public function shortDateTime(){
+		return Regionate::dateTimeShort($this->toDateTimeString());
+	}
+
+	public function normalDateTime(){
+		return Regionate::dateTimeNormal($this->toDateTimeString());
+	}
+
+	public function longDateTime(){
+		return Regionate::dateTimeLong($this->toDateTimeString());
+	}
+
+	public function fullDateTime(){
+		return Regionate::dateTimeFull($this->toDateTimeString());
+	}
+
 }
